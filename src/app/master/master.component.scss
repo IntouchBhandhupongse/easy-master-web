@@ -1,0 +1,21 @@
+table {
+  border-collapse: collapse;
+  border: 1px solid lightgray;
+}
+
+th {
+  border: 1px solid lightgray;
+}
+
+td.mat-cell {
+  padding: 20px 0;
+  border: none;
+}
+
+tr.mat-row {
+  border: 1px solid lightgray;
+}
+
+mat-mdc-paginator-container {
+  border: 1px solid lightgray;
+}
