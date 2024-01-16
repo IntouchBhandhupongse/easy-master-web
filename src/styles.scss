@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.input-control {
+  .mat-form-field-infix {
+      padding: 7px 0px 0px 0px;
+      line-height: 30px;
+  }
+
+  .mat-form-field-subscript-wrapper {
+      line-height: 17px;
+  }
+}

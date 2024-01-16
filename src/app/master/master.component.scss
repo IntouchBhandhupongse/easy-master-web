@@ -12,10 +12,32 @@ td.mat-cell {
   border: none;
 }
 
-tr.mat-row {
+.mat-mdc-cell {
   border: 1px solid lightgray;
 }
 
-mat-mdc-paginator-container {
-  border: 1px solid lightgray;
+.mat-mdc-row:hover {
+  box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+  transform: scale(1);
+}
+
+.mat-column-operation {
+  text-align: center !important;
+}
+
+.btn-action-circle-mini {
+  padding: 0px !important;
+  width: 30px !important;
+  height: 30px !important;
+  min-width: 0px !important;
+  border-radius: 50% !important;
+
+  i {
+      margin-bottom: 11px;
+  }
+}
+
+.btn-border-green {
+  border: 1px solid darkcyan !important;
+  color: darkcyan !important;
 }

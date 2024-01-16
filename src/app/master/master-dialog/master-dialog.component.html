@@ -1,0 +1,79 @@
+<h1 mat-dialog-title><b>เจ้าของ</b></h1>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="form" autocomplete="off">
+    <div fxLayout="column" fxLayoutGap="20px">
+      <mat-divider style="border-top-color: green" />
+
+      <!-- ROW 1 -->
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+          <div fxFlex="30" class="label">HN</div>
+          <div fxFlex="70" style="padding-top: 10px;">
+            {{form.value.hn ? form.value.hn : "-"}}
+          </div>
+        </div>
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+          <div fxFlex="30" class="label">ชื่อ</div>
+          <div fxFlex="70">
+            <mat-form-field>
+              <mat-label>ชื่อ</mat-label>
+              <input matInput type="text" formControlName="first_name" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+          <div fxFlex="30" class="label">นามสกุล</div>
+          <div fxFlex="70">
+            <mat-form-field>
+              <mat-label>นามสกุล</mat-label>
+              <input matInput type="text" formControlName="last_name" required>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <!-- ROW 2 -->
+      <div fxLayout="row" fxLayoutGap="20px">
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+          <div fxFlex="30" class="label">เบอร์ติดต่อ</div>
+          <div fxFlex="70">
+            <mat-form-field>
+              <mat-label>เบอร์ติดต่อ</mat-label>
+              <input matInput type="text" formControlName="tel" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+          <div fxFlex="30" class="label">Email</div>
+          <div fxFlex="70">
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input matInput type="text" formControlName="email" required>
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxFlex="33.33" fxLayout="row" fxLayoutGap="20px">
+        </div>
+
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions fxLayout="row" style="justify-content: center;">
+  <button mat-raised-button mat-dialog-close style="background-color: lightgray;">
+    <fa-icon [icon]="faCircleArrowLeft" />
+    Cancel
+  </button>
+  <button mat-raised-button style="background-color: lightblue;" (click)="onAdd()">
+    <fa-icon [icon]="faFloppyDisk" />
+    Add
+  </button>
+  <button mat-raised-button style="background-color: lightblue;" (click)="onSave()" [disabled]="!form.value.hn">
+    <fa-icon [icon]="faFloppyDisk" />
+    Save
+  </button>
+  <button mat-raised-button style="background-color: lightcoral;" (click)="onDelete()" [disabled]="!form.value.hn">
+    <fa-icon [icon]="faX" />
+    Delete
+  </button>
+</mat-dialog-actions>
